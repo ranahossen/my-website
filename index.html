@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanna be My Valentine??</title>
+    <meta name="description" content="There is a surprise." />
+    <meta name="keywords" content="Valentine, Love, Surprise" />
+    <meta name="author" content="Prashant" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="3 days" />
+    <meta name="language" content="English" />
+    <meta name="web_author" content="Prashant" />
+    <meta name="reply-to" content="" />
+    <meta name="rating" content="general" />
+    <meta name="og:title" content="There is a Surprise" />
+    <meta name="og:description" content="There is a surprise." />
+    <meta name="og:image" content="https://i.ibb.co/k6xD4nM/New-Project.jpg" />
+    <meta name="og:url" content="https://prashant-valentine.netlify.app/" />
+    <meta name="og:site_name" content="There is a Surprise" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="og:type" content="website" />
+    <meta name="og:author" content="Prashant" />
+    <meta name="og:reply-to" content="" />
+    <meta name="og:web_author" content="Prashant" />
+    <meta name="og:rating" content="general" />
+  </head>
+  <body>
+
+
+ <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop preload="auto">
+    <source src="Video Project.mp4" type="audio/mpeg">
+    আপনার ব্রাউজার অডিও সাপোর্ট করছে না।
+  </audio>
+
+  <script>
+    // Try to start music as soon as the page loads.
+    // If the browser blocks autoplay, the first click/touch starts it.
+    const bgMusic = document.getElementById("bgMusic");
+    bgMusic.volume = 0.6;
+
+    window.addEventListener("load", function () {
+      bgMusic.play().catch(() => {});
+    });
+
+    document.addEventListener("pointerdown", function () {
+      bgMusic.play().catch(() => {});
+    }, { once: true });
+  </script>
+    <!-- Instagram icon top-right -->
+    <a
+      class="ig-link"
+      href="https://www.instagram.com/the.cipher.stack"
+      target="_blank"
+      rel="noopener"
+      title="@the.cipher.stack"
+    >
+      <svg class="ig-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#f09433"/>
+            <stop offset="25%" style="stop-color:#e6683c"/>
+            <stop offset="50%" style="stop-color:#dc2743"/>
+            <stop offset="75%" style="stop-color:#cc2366"/>
+            <stop offset="100%" style="stop-color:#bc1888"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </a>
+    <h1 class="headerText" id="wedate">Will You Be My Valentine, jan? 🥺</h1>
+    <img class="image" src="https://github.com/NikhilMarko03/resources/blob/main/happy1.gif?raw=true" alt="heyy" id="mainImg" />
+    <div class="flex" id="btns">
+     <a href="index2.html" class="button">
+    Yes 🥰
+</a>
+      <button
+        class="button"
+        id="no"
+        onmouseenter="angry()"
+        onmouseleave="normal()"
+        onclick="no()"
+      >
+        No 😭
+      </button>
+    </div>
+    <div class="absImages" id="absImg">
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+      <img class="image1" src="https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true" alt="heyy" />
+
+      <!-- <img class="image2" src="./resources/sad.gif" alt="heyy" /> -->
+    </div>
+
+    <div class="model" id="model2">
+      <audio id="happyMusic" style="opacity: 0" controls loop>
+        <source src="./resources/happy.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="model-content">
+        <p class="modelText" id="modelText2">I Love you 😘😘</p>
+        <img
+          class="modelImg"
+          id="modelImg2"
+          src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif"
+          alt="heyy"
+        />
+        <button
+          class="button"
+          id="yes"
+          onmouseenter="happy()"
+          onmouseleave="normal()"
+          onclick="ly2()"
+        >
+          Love You Too 🥰
+        </button>
+      </div>
+    </div>
+
+    <div id="model" class="model">
+      <audio id="sadMusic" style="opacity: 0" controls loop>
+        <source src="./resources/sad.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="model-content">
+        <p class="modelText" id="modelText">Please</p>
+        <img
+          class="modelImg"
+          id="modelImg"
+          src="https://media1.tenor.com/images/9413ffc5a11722a3cc456a88810750bd/tenor.gif?itemid=14193216"
+          alt="heyy"
+        />
+        <div class="flex">
+          <button
+            class="button"
+            id="yes"
+            onmouseenter="happy()"
+            onmouseleave="normal()"
+            onclick="yes()"
+          >
+            Yes 🥰
+          </button>
+          <button
+            class="button"
+            id="no"
+            onmouseenter="angry()"
+            onmouseleave="normal()"
+            onclick="no()"
+          >
+            No 😭
+          </button>
+        </div>
+      </div>
+    </div>
+    <style>
+body {
+    background-color: #f8c8dc;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: start;
+    align-items: center;
+
+    /* এটা পরিবর্তন করেছি */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+  @import url("https://fonts.googleapis.com/css2?family=Love+Light&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap");
+  #bgMusic {
+    display: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  .headerText {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Lovers Quarrel";
+  }
+.image {
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    width: min(400px, 85vw);
+    height: auto;
+    max-height: 400px;
+}
+  
+  .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .button {
+    background-color: #ff4f99;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #ff71ac;
+    color: white;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .absImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .image1 {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    position: absolute;
+    animation: slideUp 1s ease-in-out;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  .model {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .audio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+  }
+  
+  .yesModel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .model-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .modelText {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Lovers Quarrel";
+  }
+  
+  .modelImg {
+    /* height: 200px; */
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+  
+  .f-aps {
+    position: absolute;
+    bottom: 0;
+    animation: slideUp 1s ease-in-out;
+    right: 0;
+    padding: 20px;
+  }
+  .f-aps img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+  }
+
+  /* Instagram icon — top-right corner */
+  .ig-link {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.9;
+  }
+  .ig-link:hover {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  .ig-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: block;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+  }
+
+    </style>
+      <script>
+    let images, absImg, mainImg;
+
+document.addEventListener("DOMContentLoaded", function () {
+  images = document.querySelectorAll(".image1");
+  absImg = document.getElementById("absImg");
+  mainImg = document.getElementById("mainImg");
+
+  function setRandomPosition(element) {
+    element.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+    element.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+  }
+
+  images.forEach(function (image) {
+    setRandomPosition(image);
+  });
+});
+
+function angry() {
+  if (!absImg) {
+    absImg = document.getElementById("absImg");
+    mainImg = document.getElementById("mainImg");
+    images = document.querySelectorAll(".image1");
+  }
+  mainImg.src = "https://github.com/NikhilMarko03/resources/blob/main/sad1.gif?raw=true";
+  absImg.style.display = "flex";
+  images.forEach(function (image) {
+    image.src = "https://github.com/NikhilMarko03/resources/blob/main/sad1.gif?raw=true";
+  });
+}
+
+function happy() {
+  if (!absImg) {
+    absImg = document.getElementById("absImg");
+    mainImg = document.getElementById("mainImg");
+    images = document.querySelectorAll(".image1");
+  }
+  absImg.style.display = "flex";
+  mainImg.src = "https://github.com/NikhilMarko03/resources/blob/main/happy3.gif?raw=true";
+  images.forEach(function (image) {
+    image.src = "https://github.com/NikhilMarko03/resources/blob/main/heart.gif?raw=true";
+  });
+}
+
+const sadCat = [
+  "https://media1.tenor.com/images/9413ffc5a11722a3cc456a88810750bd/tenor.gif",
+  "https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif",
+  "https://media1.tenor.com/images/a0554662ae7c3c60c0a7fdadac74ef18/tenor.gif",
+  "https://media3.giphy.com/media/qpCvOBBmBkble/giphy.gif",
+  "https://c.tenor.com/fpIAhF2jIY0AAAAC/cat-crying.gif",
+  "https://c.tenor.com/BP70qe8X0J8AAAAC/crycat-crying-cat.gif",
+  "https://media.giphy.com/media/7SF5scGB2AFrgsXP63/giphy.gif",
+  "https://media.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif",
+  "https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif"
+];
+
+const blackmail = [
+  "Please",
+  "I'm begging you",
+  "I'm crying",
+  
+  
+  "Please Say Yes",
+  "I'm gonna cry",
+];
+
+function normal() {
+  if (!absImg) {
+    absImg = document.getElementById("absImg");
+    mainImg = document.getElementById("mainImg");
+  }
+  absImg.style.display = "none";
+  mainImg.src = "https://github.com/NikhilMarko03/resources/blob/main/happy1.gif?raw=true";
+}
+  
+let counter = 0;
+
+function no() {
+  counter++;
+  let sadMusic = document.getElementById("sadMusic");
+  let happyMusic = document.getElementById("happyMusic");
+  if (happyMusic) happyMusic.pause();
+  if (sadMusic) {
+    sadMusic.currentTime = 0;
+    sadMusic.play().catch(() => {});
+  }
+  let model = document.getElementById("model");
+  if (model) {
+    model.style.display = "none";
+    setTimeout(() => {
+      model.style.display = "flex";
+      const modelImage = document.getElementById("modelImg");
+      const modelText = document.getElementById("modelText");
+      if (modelImage) modelImage.src = sadCat[Math.floor(Math.random() * sadCat.length)];
+      if (modelText) modelText.innerText = blackmail[Math.floor(Math.random() * blackmail.length)];
+    }, 100);
+  }
+}
+
+function yes() {
+  if (counter >= 1) {
+    let model = document.getElementById("model2");
+    let model2 = document.getElementById("model");
+    let sadMusic = document.getElementById("sadMusic");
+    if (sadMusic) sadMusic.pause();
+    if (model2) model2.style.display = "none";
+    let happyMusic = document.getElementById("happyMusic");
+    if (happyMusic) {
+      happyMusic.currentTime = 0;
+      happyMusic.play().catch(() => {});
+    }
+    if (model) {
+      model.style.display = "none";
+      setTimeout(() => {
+        model.style.display = "flex";
+      }, 100);
+    }
+    const wedate = document.getElementById("wedate");
+    const btns = document.getElementById("btns");
+    if (btns) btns.style.display = "none";
+    if (wedate) wedate.innerText = "We are each other's valentine now. I love you cutie. ❤️😘";
+  } else {
+    alert("Don't say yes right away, cutie. Play around a bit 😉😘");
+  }
+}
+
+function ly2() {
+  let model = document.getElementById("model2");
+  if (model) model.style.display = "none";
+  let model2 = document.getElementById("model");
+  if (model2) model2.style.display = "none";
+  window.location.href = "index1.html";
+}
+  </script>
+  </body>
+</html>

@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #120014, #4b003f, #17001e);
+    color: white;
+}
+
+/* Floating hearts */
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 25px;
+    animation: float 8s linear infinite;
+    opacity: .7;
+}
+
+.heart:nth-child(1) { left: 10%; }
+.heart:nth-child(2) { left: 25%; animation-delay: 2s; font-size: 18px; }
+.heart:nth-child(3) { left: 45%; animation-delay: 4s; font-size: 30px; }
+.heart:nth-child(4) { left: 65%; animation-delay: 1s; font-size: 20px; }
+.heart:nth-child(5) { left: 82%; animation-delay: 3s; font-size: 28px; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    20% { opacity: .8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+/* Main layout */
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 15px 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    width: min(100%, 450px);
+    padding: 35px 20px;
+    border-radius: 22px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(255,0,150,.25);
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: scale(.85) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Close button */
+.top-buttons {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+.top-buttons button {
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ff1493;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Heart and headings */
+.big-heart {
+    font-size: 80px;
+    display: inline-block;
+    animation: beat 1.2s infinite;
+    filter: drop-shadow(0 0 20px #ff1493);
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+h1 {
+    margin-top: 15px;
+    font-size: 34px;
+}
+
+.subtitle {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #ffb6df;
+}
+
+.message {
+    margin-top: 22px;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #eee;
+}
+
+/* Click button */
+.action-button {
+    margin-top: 25px;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ff1493;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,20,147,.5);
+    transition: .3s;
+}
+
+.action-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 30px rgba(255,20,147,.8);
+}
+
+/* Hidden message */
+#secret {
+    display: none;
+    margin-top: 22px;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #ffd1ec;
+    animation: fade .8s ease;
+}
+
+/* Video */
+#videoContainer {
+    display: none;
+    margin-top: 15px;
+    animation: fade .8s ease;
+}
+
+#myVideo {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255,20,147,.6);
+    outline: none;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 30px 18px;
+    }
+
+    .big-heart {
+        font-size: 70px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 19px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div class="hearts">
+    <div class="heart">❤️</div>
+    <div class="heart">💗</div>
+    <div class="heart">💕</div>
+    <div class="heart">💖</div>
+    <div class="heart">💓</div>
+</div>
+
+<!-- Main card -->
+<div class="main">
+    <div class="card">
+
+        <div class="top-buttons">
+            <button onclick="closePage()" aria-label="Close">✕</button>
+        </div>
+
+        <div class="big-heart">❤️</div>
+
+        <h1>It's For You</h1>
+
+        <div class="subtitle">
+            My Special Person ❤️
+        </div>
+
+        <p class="message">
+            তোমার জন্য ছোট্ট একটা webpage।<br>
+            আশা করি তোমার ভালো লাগবে। ✨<br>
+            3 Click korba 
+        </p>
+
+        <button class="action-button" onclick="showMessage()">
+            Click Me ❤️
+        </button>
+
+        <!-- First click -->
+        <div id="secret">
+            তুমি সত্যিই অনেক Special! 💖
+            <br>
+            Always Keep Smiling 😊
+        </div>
+
+        <!-- Second click: video -->
+        <div id="videoContainer">
+            <video id="myVideo" controls playsinline preload="auto">
+                <source src="gan.mp4" type="video/mp4">
+                আপনার ব্রাউজার ভিডিওটি সাপোর্ট করছে না।
+            </video>
+        </div>
+
+    </div>
+</div>
+
+<script>
+let clickCount = 0;
+
+function showMessage() {
+    clickCount++;
+
+    const message = document.getElementById("secret");
+    const videoDiv = document.getElementById("videoContainer");
+    const video = document.getElementById("myVideo");
+
+    if (clickCount === 1) {
+        // First click: show special message
+        message.style.display = "block";
+    }
+
+    else if (clickCount === 2) {
+        // Second click: show and play video
+        message.style.display = "none";
+        videoDiv.style.display = "block";
+
+        // Play with sound; if autoplay is blocked,
+        // the user can press the video's play button.
+        video.muted = false;
+
+        video.play().catch(function () {
+            console.log("ভিডিও চালাতে প্লে বাটনে ক্লিক করো।");
+        });
+    }
+
+    else if (clickCount >= 3) {
+        // Third click: go to the next page
+        video.pause();
+        window.location.href = "index1.html";
+    }
+}
+
+function closePage() {
+    window.location.href = "index2.html";
+}
+</script>
+
+</body>
+</html>
